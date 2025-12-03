@@ -1,0 +1,151 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer components {
+    /* Container principal */
+    /* *****         ***** */
+    .main-container {
+        @apply flex flex-col h-screen bg-gray-100;
+    }
+
+    /* HEADER */
+    /* Estilização do Header */
+    .header {
+        @apply bg-indigo-400 text-white p-4 w-full;    
+    }
+
+    .content-header {
+        @apply max-w-6xl mx-auto flex items-center;
+    }
+
+    .title-logo {
+        @apply text-xl font-bold;
+    }
+
+    .list-nav-link {
+        @apply flex ml-6 space-x-5;
+    }
+
+    .nav-link {
+        @apply hover:text-gray-200 transition-colors;
+    }
+    /* Fim do HEADER */
+
+    /* Conteúdo da página */
+    .content {
+        @apply flex-1 px-2 py-6 max-w-6xl mx-auto w-full;
+    }
+
+    .content-title {
+        @apply flex justify-between items-center mb-6;
+    }
+
+    .page-title {
+        @apply text-2xl;
+    }    
+    /* Fim conteúdo da página */
+
+    /* Formulário */
+    .form-container {
+        @apply mt-6 bg-white shadow-md rounded-lg px-6 py-4;
+    }
+
+    .form-label {
+        @apply block text-sm font-semibold;
+    }
+
+    .form-input {
+        @apply border p-2 w-full mt-1 rounded border-indigo-200 shadow-sm 
+        focus:border-blue-300 focus:ring-blue-200 focus:outline-none; 
+    }
+    /* Fim Formulário */
+
+    /* Tabela Usuários */
+    .table-container {
+        @apply overflow-x-auto bg-white shadow-md rounded-md;
+    }
+
+    .table {
+        @apply min-w-full border-collapse w-full;
+    }
+
+    .table-header {
+        @apply bg-indigo-200 text-gray-600 uppercase text-sm leading-normal;
+    }
+
+    .table-header th {
+        @apply px-4 py-2 text-left;
+    }
+
+    .table-header .center {
+        @apply text-center;
+    }
+
+    .table-body {
+        @apply text-gray-700 text-sm font-light;
+    }
+
+    .table-row {
+        @apply border-b border-gray-200 hover:bg-blue-50 transition;
+    }
+
+    .table-cell {
+        @apply px-4 py-4;
+    }
+
+    .table-actions {
+        @apply px-6 py-2 text-center flex space-x-1;
+    }
+    /* Fim Tabela Usuarios */
+
+    /* Pagination */
+    .pagination {
+        @apply p-3 mt-2
+    }
+    /* Fim da Paginaçao */
+
+    /* BOTÕES DA PÁGINA */
+    /* Btn primary */
+    .btn-primary {
+        @apply px-4 py-2 bg-indigo-400 text-white rounded-md hover:bg-indigo-500 
+        transition-colors;
+    }
+    .btn-success {
+        @apply px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 
+        transition-colors cursor-pointer;
+    }
+    .btn-view-1 {
+        @apply px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-500 
+        transition-colors cursor-pointer;
+    }
+    .btn-warning {
+        @apply px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 
+        transition-colors cursor-pointer;
+    }
+    .btn-error {
+        @apply px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 
+        transition-colors cursor-pointer;
+    }
+    /* FIM BOTÕES DA PÁGINA */
+
+    /* Alertas */
+    .alert-success {
+        @apply p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100 dark:text-gray-800 
+        dark:text-green-400;
+    }
+
+    .alert-error {
+        @apply p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:text-gray-800 
+        dark:text-red-400;
+    }
+    /* Fim dos Alertas */
+}

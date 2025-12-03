@@ -4,7 +4,7 @@
 
    <div class="content">
       <div class="content-title">
-         <h1 class="page-title">Listar os Usuários</h1>
+         <h1 class="page-title">Lista de Usuários</h1>
          <a href="{{ route('users.create') }}" class="btn-success">Cadastrar</a>
       </div>
 
